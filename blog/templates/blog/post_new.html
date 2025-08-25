@@ -1,0 +1,14 @@
+
+{% if user.is_authenticated %}
+
+    <h1>Nuevo post</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">agregar</button>
+</form>
+{% else %}
+<h2>Debes estar logueado para postear</h2>
+ <a href="{% url 'login' %}">login</a>
+{% endif %}

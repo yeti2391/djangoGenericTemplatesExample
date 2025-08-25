@@ -1,0 +1,16 @@
+<h2>Crear usuario</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+    <ul class="errorlist">
+        {% for error in form.non_field_errors %}
+        <li>{{ error}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <!-- renderiza todos los campos automaticamente-->
+     {{ form.as_p }}
+     <button type="submit">Registrar</button>
+</form>

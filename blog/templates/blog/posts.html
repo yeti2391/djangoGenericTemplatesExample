@@ -1,5 +1,18 @@
 <h1>Posts</h1>
 
+{% block content %}
+{% if user.is_authenticated %}
+ <h1>Welcome {{user.username}}</h1>
+ <form action="{% url 'logout' %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">logout</button>
+ </form>
+ {% else %}
+ <p>You are not logged in</p>
+ <a href="{% url 'login' %}">login</a>
+ {% endif %}
+{% endblock %}
+
 {% for post in object_list %}
 <hr>
 <a href="{% url 'detail' post.pk %}"><h2>{{ post.title}}</h2></a>

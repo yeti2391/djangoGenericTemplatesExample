@@ -1,3 +1,9 @@
 # Django Generics
 
 Repositorio creado para mostrar ejemplo de django usando generics views.
+
+En el ejemplo se muestra en la app blog como se muestra una view de lista de todos los post y tambien de cada post de forma detallada.
+
+NOTA:
+si bien cree una app de accounts para el registro, el path se hace desde el archivo url general del proyecto. Tambien es importante mencionar que dentro de la carpeta por defecto templates busca por defecto la carpeta registration.
+A posterior del login se configura una url de redireccion en settings LOGIN_REDIRECT_URL = ...

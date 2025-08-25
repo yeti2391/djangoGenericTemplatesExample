@@ -3,6 +3,9 @@
 {% block content %}
 {% if user.is_authenticated %}
  <h1>Welcome {{user.username}}</h1>
+ <a href="{% url 'password_reset' %}"><h2>resetear pass</h2></a>
+ 
+
  <form action="{% url 'logout' %}" method="POST">
     {% csrf_token %}
     <button type="submit">logout</button>

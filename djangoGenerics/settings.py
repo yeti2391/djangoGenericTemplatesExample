@@ -127,3 +127,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/blog/posts/'
 LOGOUT_REDIRECT_URL = '/blog/posts/'
+
+# FALSE EMAIL SERVER - Solo para pruebas
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
